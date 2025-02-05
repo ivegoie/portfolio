@@ -35,25 +35,26 @@ const Projects = () => {
             <Link href={project.link}>
               <Card className="shadow-lg border border-green-500/30 bg-[#0e1c18] hover:shadow-green-500/50 transition cursor-pointer">
                 <CardHeader>
-                  <CardTitle className="text-xl text-green-400">
+                  <CardTitle className="text-xl font-mono text-green-400">
                     {project.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="text-gray-400">
+                <CardContent className="text-gray-400 font-mono">
                   {project.desc}
                 </CardContent>
                 <CardContent>
-                  <p className="text-gray-400">Technology & Libraries:</p>
+                  <p className="font-mono font-medium text-green-400">
+                    Technology & Libraries:
+                  </p>
                   {project.technology.map((tech, index) => (
                     <span
-                      className="inline-block mr-2 mt-2 px-3 py-2 text-sm font-semibold text-green-400 bg-green-900 rounded-full"
+                      className="font-mono inline-block mr-2 mt-2 px-3 py-2 text-sm font-semibold text-green-400 bg-green-900 rounded-full"
                       key={index}
                     >
                       {tech}
                     </span>
                   ))}
                 </CardContent>
-                <CardContent></CardContent>
               </Card>
             </Link>
           </motion.div>

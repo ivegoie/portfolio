@@ -55,7 +55,7 @@ const Contact = () => {
         </motion.h2>
 
         <motion.p
-          className="text-lg text-gray-400 mb-8 leading-relaxed"
+          className="text-lg font-mono text-gray-400 mb-8 leading-relaxed"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
@@ -71,7 +71,7 @@ const Contact = () => {
             className="px-6 py-3 text-lg border-green-400 text-green-400 hover:text-green-500 hover:border-green-500 transition-transform transform hover:scale-110 shadow-md"
           >
             <Link href="https://www.linkedin.com/in/ivan-zivolic/">
-              LinkedIn
+              LINKEDIN
             </Link>
           </Button>
           <Button
@@ -79,7 +79,7 @@ const Contact = () => {
             variant="outline"
             className="px-6 py-3 text-lg border-green-400 text-green-400 hover:text-green-500 hover:border-green-500 transition-transform transform hover:scale-110 shadow-md"
           >
-            <Link href="mailto:ivzivolic@gmail.com">Email</Link>
+            <Link href="mailto:ivzivolic@gmail.com">EMAIL</Link>
           </Button>
         </motion.div>
 
@@ -92,7 +92,7 @@ const Contact = () => {
 
         {showSecret && (
           <motion.div
-            className="mt-4 text-lg text-green-300 bg-[#142820] p-4 rounded-md shadow-lg"
+            className="mt-4 text-lg font-mono text-green-300 bg-[#142820] p-4 rounded-md shadow-lg"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}

@@ -34,17 +34,11 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex flex-col md:flex-row items-center justify-between px-6 md:px-12 lg:px-24  text-white">
       <div className="relative max-w-2xl z-10">
-        <motion.p
-          className={`text-base pt-16 font-medium bg-gradient-to-r text-green-600 bg-clip-text text-transparent leading-tight drop-shadow-lg
-          `}
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-        >
+        <p className="text-base pt-16 font-mono text-gray-400 leading-tight">
           Hi, I&apos;m
-        </motion.p>
+        </p>
         <motion.h1
-          className={`text-6xl font-extrabold mb-6 bg-gradient-to-r from-green-400 via-green-500 to-green-600 bg-clip-text text-transparent leading-tight drop-shadow-lg ${
+          className={`text-6xl font-extrabold bg-gradient-to-r from-green-400 via-green-500 to-green-600 bg-clip-text text-transparent leading-tight drop-shadow-lg ${
             glitchActive ? "glitch" : ""
           }`}
           initial={{ opacity: 0, y: -50 }}
@@ -53,15 +47,15 @@ const Hero = () => {
         >
           <span className="glitch-text">Ivan Živolić</span>
         </motion.h1>
-
+        <h2 className="text-2xl mb-4 text-gray-400 font-semibold">
+          I build cutting-edge digital experiences
+        </h2>
         <motion.p
-          className="text-lg md:text-xl text-gray-400 mb-8 leading-relaxed"
+          className="text-lg md:text-xl text-gray-400 mb-8 font-mono leading-relaxed"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.7 }}
         >
-          I create{" "}
-          <b className="text-green-600">cutting-edge digital experiences</b>.
           Passionate about crafting innovative software that transforms ideas
           into reality. Let&apos;s build something amazing together.
         </motion.p>
@@ -75,7 +69,7 @@ const Hero = () => {
           <Button
             asChild
             variant="outline"
-            className="px-6 py-3 text-lg border-green-400 text-green-400 hover:text-green-500 hover:border-green-500 transition-transform transform hover:scale-110 shadow-md"
+            className="px-6 py-3 text-lg border-green-400 text-green-400 hover:text-green-500 hover:border-green-500 transition-transform transform hover:scale-110 shadow-md font-mono"
           >
             <Link href="#contact">Get in Touch</Link>
           </Button>
@@ -83,7 +77,7 @@ const Hero = () => {
           <Button
             asChild
             variant="outline"
-            className="px-6 py-3 text-lg border-green-400 text-green-400 hover:text-green-500 hover:border-green-500 transition-transform transform hover:scale-110 shadow-md"
+            className="px-6 py-3 text-lg border-green-400 text-green-400 hover:text-green-500 hover:border-green-500 transition-transform transform hover:scale-110 shadow-md font-mono"
           >
             <Link href="https://github.com/ivegoie" target="_blank">
               GitHub
@@ -93,7 +87,7 @@ const Hero = () => {
           <Button
             asChild
             variant="outline"
-            className="px-6 py-3 text-lg border-green-400 text-green-400 hover:text-green-500 hover:border-green-500 transition-transform transform hover:scale-110 shadow-md"
+            className="px-6 py-3 text-lg border-green-400 text-green-400 hover:text-green-500 hover:border-green-500 transition-transform transform hover:scale-110 shadow-md font-mono"
           >
             <Link
               href="https://europa.eu/europass/eportfolio/screen/share/documents/31635ad1-df70-42ac-aa0b-349849802c31?lang=en"
