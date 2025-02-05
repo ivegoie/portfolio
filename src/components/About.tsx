@@ -2,8 +2,14 @@
 
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
+import Link from "next/link";
 
-const technologies = ["TypeScript", "Next.js", "React", "Expo"];
+const technologies = [
+  { name: "TypeScript", link: "https://www.typescriptlang.org" },
+  { name: "Expo", link: "https://expo.dev" },
+  { name: "Next.js", link: "https://nextjs.org" },
+  { name: "TailWind CSS", link: "https://tailwindcss.com" },
+];
 
 const About = () => {
   return (
@@ -25,7 +31,7 @@ const About = () => {
           transition={{ delay: 0.2, duration: 0.7 }}
         >
           Meet me, who found my passion for programming through my love for
-          building games. I&apos;ve been honing my skills since 2024 while
+          building games. I&apos;ve been honing my skills since 2022 while
           building a <b className="text-green-600">IZI App</b> with a friends,
           and have since become a{" "}
           <b className="text-green-600">creative problem solver</b> in all
@@ -60,9 +66,11 @@ const About = () => {
               transition={{ duration: 0.3 }}
             >
               <Card className="shadow-lg border border-green-500/30 bg-[#0e1c18] hover:shadow-green-500/50 transition text-center cursor-pointer">
-                <CardContent className="py-4 text-green-400 text-lg font-semibold">
-                  {tech}
-                </CardContent>
+                <Link href={tech.link}>
+                  <CardContent className="py-4 text-green-400 text-lg font-semibold">
+                    {tech.name}
+                  </CardContent>
+                </Link>
               </Card>
             </motion.div>
           ))}
