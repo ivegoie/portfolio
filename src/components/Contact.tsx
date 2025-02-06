@@ -47,9 +47,9 @@ const Contact = () => {
       <div className="max-w-3xl mx-auto text-center px-6">
         <motion.h2
           className="text-4xl font-bold text-green-400 mb-6"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6, duration: 0.7 }}
         >
           Let&apos;s Connect 🤝
         </motion.h2>
@@ -58,13 +58,18 @@ const Contact = () => {
           className="text-lg font-mono text-gray-400 mb-8 leading-relaxed"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
+          transition={{ delay: 0.6, duration: 0.5 }}
         >
           I&apos;m open to new opportunities and collaborations. Feel free to
           reach out via LinkedIn or email!
         </motion.p>
 
-        <motion.div className="flex justify-center gap-5">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6, duration: 0.7 }}
+          className="flex justify-center gap-5"
+        >
           <Button
             asChild
             variant="outline"
@@ -83,12 +88,15 @@ const Contact = () => {
           </Button>
         </motion.div>
 
-        <div
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6, duration: 0.7 }}
           className="mt-10 flex items-center justify-center cursor-pointer"
           onClick={revealFunFact}
         >
           <span className="text-2xl hover:text-green-400 transition">👀</span>
-        </div>
+        </motion.div>
 
         {showSecret && (
           <motion.div

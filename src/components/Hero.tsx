@@ -34,27 +34,37 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex flex-col md:flex-row items-center justify-between px-6 md:px-12 lg:px-24  text-white">
       <div className="relative max-w-2xl z-10">
-        <p className="text-base pt-16 font-mono text-gray-400 leading-tight">
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.7 }}
+          className="text-base pt-16 font-mono text-gray-400 leading-tight"
+        >
           Hi, I&apos;m
-        </p>
+        </motion.p>
         <motion.h1
           className={`text-6xl font-extrabold bg-gradient-to-r from-green-400 via-green-500 to-green-600 bg-clip-text text-transparent leading-tight drop-shadow-lg ${
             glitchActive ? "glitch" : ""
           }`}
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.7 }}
         >
           <span className="glitch-text">Ivan Živolić</span>
         </motion.h1>
-        <h2 className="text-2xl mb-4 text-gray-400 font-semibold">
+        <motion.h2
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4, duration: 0.7 }}
+          className="text-2xl mb-4 text-gray-400 font-semibold"
+        >
           I build cutting-edge digital experiences
-        </h2>
+        </motion.h2>
         <motion.p
           className="text-lg md:text-xl text-gray-400 mb-8 font-mono leading-relaxed"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.7 }}
+          transition={{ delay: 0.6, duration: 0.7 }}
         >
           Passionate about crafting innovative software that transforms ideas
           into reality. Let&apos;s build something amazing together.
@@ -64,7 +74,7 @@ const Hero = () => {
           className="flex flex-wrap gap-4"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
+          transition={{ delay: 0.6, duration: 0.5 }}
         >
           <Button
             asChild
@@ -103,7 +113,7 @@ const Hero = () => {
         className="relative w-72 h-72 flex items-center justify-center"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.7, duration: 0.7 }}
+        transition={{ delay: 0.6, duration: 0.7 }}
       >
         <motion.div
           className="absolute w-full h-full border-4 border-green-500 rounded-full animate-pulse"

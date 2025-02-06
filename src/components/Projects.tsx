@@ -22,15 +22,22 @@ const projects = [
 const Projects = () => {
   return (
     <section id="projects" className="py-20 bg-[#081210] text-white">
-      <h2 className="text-4xl font-bold text-center mb-12 text-green-400">
+      <motion.h2
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.6, duration: 0.7 }}
+        className="text-4xl font-bold text-center mb-12 text-green-400"
+      >
         My Work
-      </h2>
+      </motion.h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-6 md:px-12">
         {projects.map((project, index) => (
           <motion.div
             key={index}
             whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6, duration: 0.7 }}
           >
             <Link href={project.link}>
               <Card className="shadow-lg border border-green-500/30 bg-[#0e1c18] hover:shadow-green-500/50 transition cursor-pointer">

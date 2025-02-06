@@ -17,9 +17,9 @@ const About = () => {
       <div className="max-w-4xl mx-auto px-6">
         <motion.h2
           className="text-4xl font-bold text-green-400 mb-8 text-center"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6, duration: 0.5 }}
         >
           About Me
         </motion.h2>
@@ -28,7 +28,7 @@ const About = () => {
           className="text-lg font-mono text-gray-400 leading-relaxed text-left mb-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.7 }}
+          transition={{ delay: 0.6, duration: 0.7 }}
         >
           Meet me, who found my passion for programming through my love for
           building games. I&apos;ve been honing my skills since 2022 while
@@ -48,7 +48,7 @@ const About = () => {
           className="text-xl font-semibold text-green-400 mb-6 text-left"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
+          transition={{ delay: 0.6, duration: 0.5 }}
         >
           Favorite Technologies:
         </motion.h3>
@@ -57,7 +57,7 @@ const About = () => {
           className="grid grid-cols-2 md:grid-cols-4 gap-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.7 }}
+          transition={{ delay: 0.6, duration: 0.7 }}
         >
           {technologies.map((tech, index) => (
             <motion.div
