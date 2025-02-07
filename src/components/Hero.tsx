@@ -50,7 +50,7 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.7 }}
         >
-          <span className="glitch-text">Ivan Živolić</span>
+          <span className="glitch-text font-mono uppercase">Ivan Živolić</span>
         </motion.h1>
         <motion.h2
           initial={{ opacity: 0 }}
